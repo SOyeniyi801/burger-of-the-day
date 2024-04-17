@@ -23,15 +23,31 @@ body {
     flex-direction: row;
     margin-top: 10%;
 }
+.burger-header {
+    text-decoration: underline;
+}
 
-.burger-container{
+.burger-body {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin-right: 20px;
+}
+
+#burger {
+    margin-left: 48px;
+}
+.burger-container {
     border: 8px solid red;
     display: flex;
     flex-direction: column;
     background-color: #31343A;
     color: #fff;
     font-size: 40px;
-    text-decoration: underline;
+    align-items: center;
+    width: 600px;
+    height: 500px;
 }
 
 .outline {
@@ -42,3 +58,12 @@ body {
 .img-burger {
   width: 90px;
 }
+
+.button {
+    width: 110px;
+    height: 110px;
+    background-color: yellow;
+    border-radius: 15%;
+}
+
+
