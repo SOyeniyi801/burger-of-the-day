@@ -1,15 +1,19 @@
-const burger = document.getElementById('burger')
-const btn = document.querySelector('.button')
-const price = document.getElementById('price')
+const burger = document.getElementById("burger");
+const btn = document.querySelector(".button");
+const price = document.getElementById("price");
 
-btn.addEventListener('click', () => {
- const getBurger = async () => {
-    const response = await fetch('https://bobsburgers-api.herokuapp.com/burgerOfTheDay/5')
+btn.addEventListener("click", () => {
+  const getBurger = async () => {
+    const response = await fetch(
+      "https://bobsburgers-api.herokuapp.com/burgerOfTheDay/"
+    );
     const data = await response.json();
-    burger.innerHTML = data.name
-    price.innerHTML = data.price
-    console.log(data.name, data.price)
- }
- getBurger()
-})
 
+    const randomBurger = Math.floor(Math.random() * data.length);
+    console.log(data[randomBurger]);
+   
+    burger.innerHTML = data[randomBurger].name
+    price.innerHTML = data[randomBurger].price
+  };
+  getBurger();
+});
